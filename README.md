@@ -17,6 +17,8 @@ Install with: ```apt update && apt install prometheus-node-exporter prometheus-n
 2. Copy 60prometheus-metrics to /etc/apt/apt.conf.d/60prometheus-metrics
 3. if you have not already enabled text-metrics, add the following line to /etc/default/prometheus-node-exporter
    ```--collector.textfile.directory=/var/lib/prometheus/node-exporter"``` 
+4. ???
+5. Access the stats via Prometheus (metricname = apt)
 
 ## Reason for creating this repo ##
 The provided configs by Tom Henderson did not work (anymore) on my ubuntu version, mainly because of /usr/lib/update-notifier/apt-check returning its output via stderr for some reason
