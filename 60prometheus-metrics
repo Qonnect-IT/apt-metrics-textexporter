@@ -1,8 +1,8 @@
 # /etc/apt/apt.conf.d/60prometheus-metrics
 APT::Update::Post-Invoke-Success {
-  "/usr/share/prometheus-node-exporter-collectors/apt.sh | sponge /var/lib/prometheus/node-exporter/apt.prom || true"
+  "/usr/share/apt-metrics.sh | sponge /var/lib/prometheus/node-exporter/apt-custom.prom || true"
 };
 
 DPkg::Post-Invoke {
-  "/usr/share/prometheus-node-exporter-collectors/apt.sh | sponge /var/lib/prometheus/node-exporter/apt.prom || true"
+  "/usr/share/apt-metrics.sh | sponge /var/lib/prometheus/node-exporter/apt-custom.prom || true"
 };
