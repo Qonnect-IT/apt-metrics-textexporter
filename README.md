@@ -6,7 +6,7 @@ Original project from: [Tom Henderson](https://tom-henderson.github.io/2020/12/0
 
 ## Dependencies ##
 * prometheus-node-exporter
-* prometheus-node-exporter-collectors
+* prometheus-node-exporter-collectors (this will deliver an alternate apt.sh metric exporter. use 60prometheus-metrics.orig if you want to use this!)
 * sponge (part of moreutils)
 
 Install with: ```apt update && apt install prometheus-node-exporter prometheus-node-exporter-collectors moreutils```
