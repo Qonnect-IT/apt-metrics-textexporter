@@ -15,7 +15,7 @@ UPDATESTOTAL="$(/usr/bin/apt-get --just-print dist-upgrade \
   | /usr/bin/uniq -c \
   | awk '{ gsub(/\\\\/, "\\\\", $2); gsub(/"/, "\\\"", $2);
            gsub(/\[/, "", $3); gsub(/\]/, "", $3);
-           print "apt_upgrades_pending{origin=\"" $2 "\",arch=\"" $NF "\"} " $1}'
+           print "apt_upgrades_pending_total{origin=\"" $2 "\",arch=\"" $NF "\"} " $1}'
 )"
 AUTOREMOVE="$(/usr/bin/apt-get --just-print autoremove \
   | /usr/bin/awk '/^Remv/{a++}END{printf "apt_autoremove_pending %d", a}'
